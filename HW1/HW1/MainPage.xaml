@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HW1.MainPage">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style TargetType="StackLayout" Class="CustomStackLayout">
+            <Setter Property="BackgroundColor" Value="#F37222"/>
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Padding" Value="30"/>
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout HorizontalOptions="CenterAndExpand">
+        <Frame BackgroundColor= "#F37222" Padding="24" CornerRadius="0">
+            <Label Text="Kalkulačka bez editace" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <StackLayout StyleClass="CustomStackLayout">
+            <Label HorizontalOptions="StartAndExpand" Text="Výše dlužné částky"/>
+            <Label HorizontalOptions="EndAndExpand" Text="{Binding Debt}"/>
+        </StackLayout>
+        <StackLayout StyleClass="CustomStackLayout">
+            <Label HorizontalOptions="StartAndExpand" Text="Úrok"/>
+            <Label HorizontalOptions="EndAndExpand" Text="{Binding Interest}"/>
+        </StackLayout>
+        <StackLayout StyleClass="CustomStackLayout">
+            <Label HorizontalOptions="StartAndExpand" Text="Délka splácení"/>
+            <Label HorizontalOptions="EndAndExpand" Text="{Binding RepaymentPeriod}"/>
+        </StackLayout>
+        <StackLayout StyleClass="CustomStackLayout">
+            <Label HorizontalOptions="StartAndExpand" Text="Výše měsíční splátky"/>
+            <Label HorizontalOptions="EndAndExpand"  Text="{Binding MonthlyPay}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
